@@ -19,6 +19,9 @@ jobs:
         with:
             fetch-depth: 0
 
+      - name: Restore dependencies
+        run: dotnet restore
+
       - name: Analyze with SonarCloud
         run: |
          dotnet tool install --global dotnet-sonarscanner
